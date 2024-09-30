@@ -1,0 +1,28 @@
+
+contenedor-cartas {
+    display: flex;
+    justify-content: space-between; 
+    gap: 50px; 
+  }
+  
+  .carta {
+    text-align: center;
+    background-color: beige;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 45%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carta img {
+    max-width: 50%; 
+  }
+  
+  .carta h3 {
+    margin-top: 10px;
+    font-size: 1.5em;
+  }
+  
+  .carta p {
+    font-size: 1em;
+  }
