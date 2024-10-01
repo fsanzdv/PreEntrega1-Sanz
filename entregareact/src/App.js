@@ -8,16 +8,26 @@ import NikeImg from "./img/nike.jpg";
 import MizunoImg from "./img/mizuno.jpg";
 import EstiloCss from "./components/App.css";
 
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Internacional from "./pages/Internacional";
+import Clubs from "./pages/Clubs";
+import Sale from "./pages/Sale";
+
 
 function App() {
     return  ( 
-    <>
-    <NavBar/>
-    <ProfileCard titulo="Botas adidas" parrafo="adidas Kakari RS Soft Ground Boots" img={AdidasImg}/>
-    <ProfileCard titulo="Botas nike" parrafo ="Nike Tiempo Legend 10 Elite Firm Ground Football Boots" img={NikeImg}/>
-    <ProfileCard titulo = "Botas mizuno" parrafo ="Mizuno Morelia IV Made In Japan FG Boots Mens" img={MizunoImg}/>
-    <ItemListContainer mensaje = "Hola esta es la futura pagina de RugbyShop"/>
-    </>
+    <BrowserRouter>
+       <NavBar/>
+         <Routes>
+          <Route path="/" element={<Home/>}>
+          <Route path="internacional" element={<Internacional/>}/>
+          <Route path="clubs" element={<Clubs/>}/>
+          <Route path="sale" element={<Sale/>}/>
+          </Route>
+         </Routes>
+         <ItemListContainer/>
+    </BrowserRouter>
     )
 }
 
